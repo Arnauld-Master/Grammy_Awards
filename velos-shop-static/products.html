@@ -1,0 +1,65 @@
+<!doctype html>
+<html lang="fr">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Vélos Shop — Catalogue</title>
+    <meta name="description" content="Découvrez notre catalogue de vélos: route, VTT, urbain." />
+    <link rel="icon" href="/assets/favicon.ico" />
+    <link rel="stylesheet" href="/css/styles.css" />
+  </head>
+  <body>
+    <header class="site-header">
+      <div class="container header-inner">
+        <a class="brand" href="/index.html">Vélos Shop</a>
+        <nav class="nav">
+          <a href="/index.html" class="nav-link">Accueil</a>
+          <a href="/products.html" class="nav-link active">Catalogue</a>
+          <a href="/cart.html" class="nav-link">Panier <span id="nav-cart-count" class="badge">0</span></a>
+        </nav>
+      </div>
+    </header>
+
+    <main class="section">
+      <div class="container">
+        <div class="section-head">
+          <h1>Catalogue</h1>
+          <div class="filters">
+            <input id="search" type="search" placeholder="Rechercher un modèle..." />
+            <select id="category">
+              <option value="">Toutes catégories</option>
+              <option value="route">Route</option>
+              <option value="vtt">VTT</option>
+              <option value="urbain">Urbain</option>
+              <option value="electrique">Électrique</option>
+            </select>
+            <select id="sort">
+              <option value="">Tri par défaut</option>
+              <option value="price-asc">Prix: croissant</option>
+              <option value="price-desc">Prix: décroissant</option>
+              <option value="rating-desc">Mieux notés</option>
+            </select>
+          </div>
+        </div>
+        <div id="products-grid" class="grid"></div>
+      </div>
+    </main>
+
+    <footer class="site-footer">
+      <div class="container footer-inner">
+        <div>
+          <div class="brand">Vélos Shop</div>
+          <p class="muted-text">© <span id="year"></span> Vélos Shop. Tous droits réservés.</p>
+        </div>
+        <div class="footer-links">
+          <a href="/products.html" class="link">Catalogue</a>
+          <a href="/cart.html" class="link">Panier</a>
+        </div>
+      </div>
+    </footer>
+
+    <script src="/js/data.js"></script>
+    <script src="/js/utils.js"></script>
+    <script src="/js/products.js"></script>
+  </body>
+</html>
