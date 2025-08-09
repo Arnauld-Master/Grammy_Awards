@@ -1,0 +1,61 @@
+<!doctype html>
+<html lang="fr">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Vélos Shop — Panier</title>
+    <meta name="description" content="Votre panier: modifiez les quantités et finalisez votre commande." />
+    <link rel="icon" href="/assets/favicon.ico" />
+    <link rel="stylesheet" href="/css/styles.css" />
+  </head>
+  <body>
+    <header class="site-header">
+      <div class="container header-inner">
+        <a class="brand" href="/index.html">Vélos Shop</a>
+        <nav class="nav">
+          <a href="/index.html" class="nav-link">Accueil</a>
+          <a href="/products.html" class="nav-link">Catalogue</a>
+          <a href="/cart.html" class="nav-link active">Panier <span id="nav-cart-count" class="badge">0</span></a>
+        </nav>
+      </div>
+    </header>
+
+    <main class="section">
+      <div class="container">
+        <h1>Votre panier</h1>
+        <div id="cart-empty" class="empty hidden">
+          <p>Votre panier est vide.</p>
+          <a class="btn btn-primary" href="/products.html">Parcourir le catalogue</a>
+        </div>
+        <div id="cart-content" class="cart-grid hidden">
+          <div id="cart-items" class="cart-items"></div>
+          <aside class="cart-summary">
+            <h2>Résumé</h2>
+            <div class="summary-row"><span>Sous-total</span><span id="subtotal">—</span></div>
+            <div class="summary-row"><span>Livraison</span><span id="shipping">Offerte</span></div>
+            <div class="summary-row total"><span>Total</span><span id="total">—</span></div>
+            <button id="checkout" class="btn btn-primary full">Passer la commande</button>
+            <button id="clear-cart" class="btn btn-ghost full">Vider le panier</button>
+          </aside>
+        </div>
+      </div>
+    </main>
+
+    <footer class="site-footer">
+      <div class="container footer-inner">
+        <div>
+          <div class="brand">Vélos Shop</div>
+          <p class="muted-text">© <span id="year"></span> Vélos Shop. Tous droits réservés.</p>
+        </div>
+        <div class="footer-links">
+          <a href="/products.html" class="link">Catalogue</a>
+          <a href="/cart.html" class="link">Panier</a>
+        </div>
+      </div>
+    </footer>
+
+    <script src="/js/data.js"></script>
+    <script src="/js/utils.js"></script>
+    <script src="/js/cart.js"></script>
+  </body>
+</html>

@@ -1,0 +1,81 @@
+<!doctype html>
+<html lang="fr">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Vélos Shop — Accueil</title>
+    <meta name="description" content="Boutique de vélos: route, VTT, urbain. Livraison rapide, prix imbattables." />
+    <link rel="icon" href="/assets/favicon.ico" />
+    <link rel="stylesheet" href="/css/styles.css" />
+  </head>
+  <body>
+    <header class="site-header">
+      <div class="container header-inner">
+        <a class="brand" href="/index.html">Vélos Shop</a>
+        <nav class="nav">
+          <a href="/index.html" class="nav-link active">Accueil</a>
+          <a href="/products.html" class="nav-link">Catalogue</a>
+          <a href="/cart.html" class="nav-link">Panier <span id="nav-cart-count" class="badge">0</span></a>
+        </nav>
+      </div>
+    </header>
+
+    <main>
+      <section class="hero">
+        <div class="container hero-inner">
+          <div class="hero-text">
+            <h1>Trouvez le vélo parfait</h1>
+            <p>Route, VTT, urbain: des modèles sélectionnés pour la performance et le confort.</p>
+            <div class="hero-cta">
+              <a href="/products.html" class="btn btn-primary">Voir le catalogue</a>
+              <a href="/cart.html" class="btn btn-ghost">Voir le panier</a>
+            </div>
+          </div>
+          <div class="hero-media" aria-hidden="true">
+            <div class="hero-art"></div>
+          </div>
+        </div>
+      </section>
+
+      <section class="section">
+        <div class="container">
+          <div class="section-head">
+            <h2>Nos coups de cœur</h2>
+            <a href="/products.html" class="link">Tout voir →</a>
+          </div>
+          <div id="featured-grid" class="grid"></div>
+        </div>
+      </section>
+
+      <section class="section muted">
+        <div class="container newsletter">
+          <div>
+            <h3>Recevez nos offres</h3>
+            <p>Inscrivez-vous pour des promos exclusives et des conseils d'experts.</p>
+          </div>
+          <form class="newsletter-form" onsubmit="event.preventDefault(); alert('Merci pour votre inscription !'); this.reset();">
+            <input type="email" required placeholder="Votre email" />
+            <button class="btn btn-primary" type="submit">S'inscrire</button>
+          </form>
+        </div>
+      </section>
+    </main>
+
+    <footer class="site-footer">
+      <div class="container footer-inner">
+        <div>
+          <div class="brand">Vélos Shop</div>
+          <p class="muted-text">© <span id="year"></span> Vélos Shop. Tous droits réservés.</p>
+        </div>
+        <div class="footer-links">
+          <a href="/products.html" class="link">Catalogue</a>
+          <a href="/cart.html" class="link">Panier</a>
+        </div>
+      </div>
+    </footer>
+
+    <script src="/js/data.js"></script>
+    <script src="/js/utils.js"></script>
+    <script src="/js/main.js"></script>
+  </body>
+</html>
